@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Board : MonoBehaviour
 {
     public float timeBetweenPieces = 0.05f;
-
+    public int PointsPerMatch;
     public int width;
     public int height;
     public GameObject tileObject;
@@ -170,6 +171,7 @@ public class Board : MonoBehaviour
         else
         {
             ClearPieces(allMatches);
+            AwardPoints(allMatches);
         }
 
         startTile = null;
@@ -206,6 +208,7 @@ public class Board : MonoBehaviour
             {
                 newMatches = newMatches.Union(matches).ToList();
                 ClearPieces(matches);
+                AwardPoints(matches);
             }
         });
         if (newMatches.Count > 0)
@@ -359,4 +362,8 @@ public class Board : MonoBehaviour
         return foundMatches;
     }
 
+public void AwardPoints(List<Piece> allMatches)
+{
+    GameManager.Instance.AddPoint(allMatches.Count * PointsPerMatch);
+}
 }
