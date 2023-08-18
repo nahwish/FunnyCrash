@@ -12,16 +12,12 @@ public class Piece : MonoBehaviour
 
     public enum type
     {
-        elephant,
-        giraffe,
-        hippo,
-        monkey,
-        panda,
-        parrot,
-        penguin,
-        pig,
-        rabbit,
-        snake
+        caramel,
+        sugus,
+        chocobomb,
+        donna,
+        cupcake,
+        star,
     };
 
     public type pieceType;
