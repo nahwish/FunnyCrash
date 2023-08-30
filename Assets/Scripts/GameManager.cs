@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public float currentTimeToMatch = 0;
     public int Points = 0;
     public UnityEvent OnPintsUpdated;
+    public UnityEvent<GameState> OnGameStateUpdated;
     public GameState gameState;
     public enum GameState
     {
