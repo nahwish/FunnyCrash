@@ -196,6 +196,7 @@ public class Board : MonoBehaviour
         var StarPiece = Pieces[startTile.x, startTile.y];
         var EndPiece = Pieces[endTile.x, endTile.y];
 
+        AudioManager.Instance.Move();
         StarPiece.Move(endTile.x, endTile.y);
         EndPiece.Move(startTile.x, startTile.y);
 
@@ -213,6 +214,7 @@ public class Board : MonoBehaviour
 
         if (allMatches.Count==0)
         {
+            AudioManager.Instance.Miss();
             StarPiece.Move(startTile.x, startTile.y);
             EndPiece.Move(endTile.x, endTile.y);
             Pieces[startTile.x, startTile.y] = StarPiece;
