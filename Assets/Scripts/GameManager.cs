@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public float timeToMatch = 10f;
     public float currentTimeToMatch = 0;
     public int Points = 0;
-    public UnityEvent OnPintsUpdated;
+    public UnityEvent OnPointsUpdated;
     public UnityEvent<GameState> OnGameStateUpdated;
     public GameState gameState;
     public enum GameState
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     public void AddPoint(int newPoint)
     {
         Points += newPoint;
-        OnPintsUpdated?.Invoke();
+        OnPointsUpdated?.Invoke();
         currentTimeToMatch = 0;
     }
     public void RestartGame()

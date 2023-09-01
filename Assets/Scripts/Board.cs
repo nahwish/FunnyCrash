@@ -88,12 +88,31 @@ public class Board : MonoBehaviour
         yield return null;
     }
 
-    private void ClearPieceAt(int x, int y)
+   private void ClearPieceAt(int x, int y)
+{
+    if (int.TryParse(x.ToString(), out int parsedX) && int.TryParse(y.ToString(), out int parsedY))
     {
-        var pieceToClear = Pieces[x, y];
-        pieceToClear.Remove(true);
-        Pieces[x, y] = null;
+        if (parsedX >= 0 && parsedX < Pieces.GetLength(0) && parsedY >= 0 && parsedY < Pieces.GetLength(1))
+        {
+            var pieceToClear = Pieces[parsedX, parsedY];
+            
+            if (pieceToClear != null)
+            {
+                pieceToClear.Remove(true);
+                Pieces[parsedX, parsedY] = null;
+            }
+        }
+        else
+        {
+            Debug.LogError("Coordinates are out of range.");
+        }
     }
+    else
+    {
+        Debug.LogError("Invalid integer coordinates.");
+    }
+}
+
 
     private void ClearAllPieces()
     {
@@ -345,7 +364,7 @@ public class Board : MonoBehaviour
             if (nextX >= 0 && nextX < width && nextY >= 0 && nextY < height)
             {
                 var nextPiece = Pieces[nextX, nextY];
-                if (nextPiece != null && nextPiece.pieceType == startPiece.pieceType)
+                if (nextPiece != null && nextPiece?.pieceType == startPiece?.pieceType)
                 {
                     matches.Add(nextPiece);
                 }
