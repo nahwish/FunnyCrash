@@ -13,13 +13,13 @@ public class UiPints : MonoBehaviour
 
     void Start()
     {
-        GameManager.Instance.OnPintsUpdated.AddListener(UpdatePoint);
+        GameManager.Instance.OnPointsUpdated.AddListener(UpdatePoint);
         GameManager.Instance.OnGameStateUpdated.AddListener(GameStateUpdated);
     }
 
     private void OnDestroy()
     {
-        GameManager.Instance.OnPintsUpdated.RemoveListener(UpdatePoint);
+        GameManager.Instance.OnPointsUpdated.RemoveListener(UpdatePoint);
         GameManager.Instance.OnGameStateUpdated.RemoveListener(GameStateUpdated);
     }
     private void GameStateUpdated(GameManager.GameState newState)
