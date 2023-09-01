@@ -7,11 +7,12 @@ public class AudioManager : MonoBehaviour
     public static AudioManager Instance;
     private void Awake()
     {
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
-        else{
+        else
+        {
             Destroy(gameObject);
         }
     }
@@ -24,12 +25,34 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // GameManager.Instance.OnPoints
+        GameManager.Instance.OnPointsUpdated.AddListener(PointsUpdated);
+        GameManager.Instance.OnGameStateUpdated.AddListener(GameStateUpdated);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void GameStateUpdated(GameManager.GameState newState)
     {
-        
+        if (newState == GameManager.GameState.GameOver)
+        {
+            SfxSource.PlayOneShot(gameOverSFX);
+        }
+        if (newState == GameManager.GameState.InGame)
+        {
+            SfxSource.PlayOneShot(matchSFX);
+        }
+
+    }
+
+    private void PointsUpdated()
+    {
+        SfxSource.PlayOneShot(matchSFX);
+    }
+    public void Move()
+    {
+        SfxSource.PlayOneShot(moveSFX);
+
+    }
+    public void Miss()
+    {
+        SfxSource.PlayOneShot(moveSFX);
     }
 }
