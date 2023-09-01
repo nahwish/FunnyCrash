@@ -29,12 +29,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     } 
-    public void AddPoint(int newPoint)
-    {
-        Points += newPoint;
-        OnPintsUpdated?.Invoke();
-        currentTimeToMatch = 0;
-    }
     private void Update()
     {
         if(gameState == GameState.InGame)
@@ -43,7 +37,25 @@ public class GameManager : MonoBehaviour
             if(currentTimeToMatch > timeToMatch)
             {
                 gameState = GameManager.GameState.GameOver;
+                OnGameStateUpdated?.Invoke(gameState);
             }
         }
+    }
+    public void AddPoint(int newPoint)
+    {
+        Points += newPoint;
+        OnPintsUpdated?.Invoke();
+        currentTimeToMatch = 0;
+    }
+    public void RestartGame()
+    {
+        Points = 0;
+        gameState = GameState.InGame;
+        OnGameStateUpdated?.Invoke(gameState);
+        currentTimeToMatch = 0f;
+    }
+    public void ExitGame()
+    {
+
     }
 }
