@@ -26,7 +26,8 @@ public class UiPints : MonoBehaviour
     {
         if(newState == GameManager.GameState.GameOver)
         {
-            
+            displayedPoint = 0;
+            pointsLabel.text = displayedPoint.ToString();
         }
     }
     void UpdatePoint()
