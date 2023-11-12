@@ -20,6 +20,7 @@ public class UIGameOver : MonoBehaviour
     {
         if (newState == GameManager.GameState.GameOver)
         {
+            
             displayedPoints = 0;
             StartCoroutine(DisplayPointsCoroutine());
         }

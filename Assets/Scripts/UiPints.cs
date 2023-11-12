@@ -24,8 +24,11 @@ public class UiPints : MonoBehaviour
     }
     private void GameStateUpdated(GameManager.GameState newState)
     {
-        if(newState == GameManager.GameState.GameOver)
+        if (newState == GameManager.GameState.GameOver)
         {
+            bronzeMedal.SetActive(false);
+            silverMedal.SetActive(false);
+            goldMedal.SetActive(false);
             displayedPoint = 0;
             pointsLabel.text = displayedPoint.ToString();
         }
@@ -46,15 +49,15 @@ public class UiPints : MonoBehaviour
     }
     private void Update()
     {
-        if (displayedPoint >= 30)
+        if (displayedPoint >= 100)
         {
             bronzeMedal.SetActive(true);
         }
-        if (displayedPoint >= 60)
+        if (displayedPoint >= 250)
         {
             silverMedal.SetActive(true);
         }
-        if (displayedPoint >= 90)
+        if (displayedPoint >= 500)
         {
             goldMedal.SetActive(true);
         }

@@ -205,7 +205,7 @@ public class Board : MonoBehaviour
 
         yield return new WaitForSeconds(0.6f);
 
-        var startMatches = GetMatchByPiece(startTile.x, startTile.y, 3);
+        var startMatches = GetMatchByPiece(startTile.x, startTile.y, 4);
         var endMatches = GetMatchByPiece(endTile.x, endTile.y, 3);
 
 
