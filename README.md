@@ -55,7 +55,7 @@ Si aún no has instalado Unity en tu sistema, sigue estos pasos:
 Clona este repositorio o descárgalo como un archivo ZIP.
 
    ```
-   git clone https://github.com/tu_usuario/tu-repositorio.git
+   git clone git@github.com:nahwish/funnycrash.git
    ```
 
 3. *Abrir el Proyecto en Unity*
