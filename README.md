@@ -10,8 +10,7 @@ El propósito del juego consiste en encontrar dulces del mismo tipo y alinearlos
 <hr/>
 
 <p align="center">
-
-   *Pantalla de inicio*
+Pantalla de inicio
 </p>
 
 <p align="center">
@@ -21,8 +20,7 @@ El propósito del juego consiste en encontrar dulces del mismo tipo y alinearlos
 <hr/>
 
 <p align="center">
-
-*Gameplay*
+Gameplay
 </p>
 
 <p align="center">
@@ -32,8 +30,7 @@ El propósito del juego consiste en encontrar dulces del mismo tipo y alinearlos
 <hr/>
 
 <p align="center">
-
-*Pantalla game over*
+Pantalla game over
 </p>
 
 <p align="center">
