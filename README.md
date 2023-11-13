@@ -10,6 +10,9 @@
 El objetivo del juego es buscar dulces del mismo tipo y alinearlos para obtener puntos. Obtener puntos te permite además, 
 <img src="./public/funny.png" alt="Home">
 
+![gig del videojuego]("./public/labyrinth-1.gif")
+
+
 
 
 
