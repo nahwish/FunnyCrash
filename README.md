@@ -8,7 +8,11 @@
 - imagen de game over
 
 El objetivo del juego es buscar dulces del mismo tipo y alinearlos para obtener puntos. Obtener puntos te permite además, 
-<img src="./public/funny.png" alt="Home">
+<img src="./public/funny.png" alt="imagen de portada del videojuego">
+
+<img src="./public/FUNNY-GAME.gif"  width="300" alt="gif del gameplay"> <img src="./public/FUNNY-START.gif" width="300" alt="gif del inicio del juego"> <img src="./public/FUNNY-GAMEOVER.gif" width="300" alt="gif de la pantala game over">
+
+
 
 
 
