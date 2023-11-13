@@ -1,26 +1,32 @@
 # FunnyCrash 🕹️
 
 ## Descripción
+
 **FunnyCrash** es un juego movil 2D construido con Unity y C#.
-
-
 El propósito del juego consiste en encontrar dulces del mismo tipo y alinearlos para acumular puntos. Cada vez que obtienes puntos, se añaden segundos adicionales a la cuenta regresiva. El desafío radica en evitar que la cuenta regresiva llegue a cero.
+
 <img src="./public/funny.png" alt="imagen de portada del videojuego">
 
 <hr/>
-**Pantalla de inicio**
+*Pantalla de inicio*
 
+<p align="center">
 <img src="./public/FUNNY-START.gif" width="300" alt="gif del inicio del juego"> 
+</p>
 
 <hr/>
-**Gameplay**
+*Gameplay*
 
+<p align="center">
 <img src="./public/FUNNY-GAME.gif"  width="300" alt="gif del gameplay"> 
+</p>
 
 <hr/>
-**Pantalla game over**
+*Pantalla game over*
 
+<p align="center">
 <img src="./public/FUNNY-GAMEOVER.gif" width="300" alt="gif de la pantala game over">
+</p>
 
 <hr/>
 
