@@ -8,21 +8,33 @@ El propósito del juego consiste en encontrar dulces del mismo tipo y alinearlos
 <img src="./public/funny.png" alt="imagen de portada del videojuego">
 
 <hr/>
-*Pantalla de inicio*
+
+<p align="center">
+
+   *Pantalla de inicio*
+</p>
 
 <p align="center">
 <img src="./public/FUNNY-START.gif" width="300" alt="gif del inicio del juego"> 
 </p>
 
 <hr/>
+
+<p align="center">
+
 *Gameplay*
+</p>
 
 <p align="center">
 <img src="./public/FUNNY-GAME.gif"  width="300" alt="gif del gameplay"> 
 </p>
 
 <hr/>
+
+<p align="center">
+
 *Pantalla game over*
+</p>
 
 <p align="center">
 <img src="./public/FUNNY-GAMEOVER.gif" width="300" alt="gif de la pantala game over">
